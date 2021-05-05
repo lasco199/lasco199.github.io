@@ -1,0 +1,385 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Lato', sans-serif;
+}
+
+.title {
+  font-size: 40px;
+  font-family: 'Montserrat', sans-serif; 
+
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif; 
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif; 
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #61ff7e;
+  background-color: #092327;
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif; 
+  text-transform: uppercase;
+  font-size: 25px;
+  color: #61ff7e;
+  text-align: center;
+}
+
+ h5, h6 {
+  font-family: 'Roboto', sans-serif; 
+  font-size:1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.gridcontainer {
+    display: grid;
+    grid-template: 1fr 4fr 1fr /  2fr 1fr 1fr;
+    height: 98vh;  
+  }
+  
+  header {
+      background-image:url('surf.jpg');
+      font-size: 50px;
+      grid-row: 1/2;
+      grid-column: 1 / 4;
+      display: flex;
+      flex-wrap: wrap;
+      align-self: flex-start;
+
+      color: #61ff7e;
+      text-shadow: 2px 2px black;
+  
+  }
+
+  #header-bg {
+    width:100%;
+    height: 130px;
+  }
+
+  .slicknav_menu {
+    width:100%;
+    background-image:url('kayaktitlebannertop.jpg');
+    background-repeat: initial;
+  }
+
+  .title {
+    position:absolute;
+    background-color: #294c65;
+    border-radius: 10px;
+    padding:5px;
+    margin-top: 10px;
+    padding-top:8px;
+    margin-left:0.5em;
+    margin-right: 0.2em;
+  }
+  i {
+    color: rgb(217, 238, 219);
+  }
+
+
+  
+
+  .nav {
+    align-self:flex-end;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.yt {
+  text-align: center;
+}
+
+.yt li:hover {
+  border-radius: 0px;
+  cursor: pointer;
+
+}
+
+
+#menu {
+  align-self:flex-end;
+  order: 1;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 0;
+  display: flex;
+  justify-content:space-around;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+
+.slicknav_menu {
+    display: none;
+  }
+
+
+
+  @media screen and (max-width: 780px) {
+    /* #menu is the original menu */
+    #menu {
+      display: none;
+    }
+  
+    .slicknav_menu {
+      display: block;
+      background-color: #5cdb95 !important;
+    }
+  
+    .slicknav_menu,
+    .slicknav_menutxt {
+      font-family: "Montserrat";
+    }
+  
+    .slicknav_nav .slicknav_row,
+    .slicknav_nav a {
+      display: block;
+      max-width: 100px;
+    }
+  
+    .slicknav_nav ul {
+      margin: 0 0 0 20px;
+      text-align: center;
+      justify-content: flex-end;
+
+    }
+  
+    #menu li {
+      font-family: 'Montserrat', sans-serif; 
+      color: black;
+      padding: 2px 3px;
+      margin-right: 0;
+    }
+  
+    #menu li:hover {
+      color: #8EE4AF;
+      background: #294c65;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    left > a {
+      font-size: 1em;
+      display: block;
+      background: #294c65 !important;
+      color:rgb(198, 243, 215);
+    }
+  
+
+    .gridcontainer {
+        display: grid;
+        grid-template: 1fr 1fr 1fr /  1fr 1fr 1fr;
+        height: 98vh;  
+      }
+    header {
+        grid-row:1;
+    }
+    .left {
+
+        grid-row: 2;
+        grid-column: 1/4;
+    }
+
+    .right {
+      grid-row: 3;
+      grid-column: 1/4;
+      padding:10px;
+      font-size: 25px;
+      background-color: #b5e2fa;
+      color: black;
+
+    }
+    main {
+        grid-row: 3;
+        grid-column: 1/4;
+    }
+    aside {
+        grid-row: 4;
+        grid-column: 1/4;
+    }
+
+
+
+    footer {
+      grid-row: 5;
+      grid-column: 1/4;
+    }
+  } /* end of breakpoint stuff */
+
+ a {
+  color:rgb(198, 243, 215);
+}
+
+.bodylink {
+  color:  #294c65
+}
+  
+  
+
+#menu > li {
+    color: rgb(198, 243, 215);
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdowncontent {
+    position: absolute;
+    display: none;
+    top: 100%;
+}
+  
+header li:hover ul {
+    display: block;
+    margin-left: -40px;
+    margin-top: 1px;
+    z-index: 2;
+    position: absolute;
+    top: 100%;
+    background-color: #294c65;
+}
+
+/*/.dropdowncontent > li {
+    white-space: nowrap;
+    margin-top: 2px;
+    margin-left: -25px;
+    font-size: 25px;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 26px;
+    background-color:  #379683;
+    max-height: 60px;
+    border-style: groove;
+    border-width: 1px;
+    border-color: black;
+    border-radius:10px;
+} /*/
+
+#menu > li {
+    position: relative;
+    margin-left: 10px;
+    font-size: 25px;
+    padding-top:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #294c65;
+    max-height: 60px;
+    border-style: groove;
+    border-width: 1px;
+    border-color: black;
+    border-radius:10px;
+}
+
+
+
+
+  
+#menu > li:hover {
+      background-color:  #0f2336;
+  }
+
+
+
+
+  
+  .left { 
+    padding:10px;
+    font-size:25px;
+    background-color: #ded5cf;
+    color: black;
+
+}
+@media screen and (min-width: 780px) {
+
+.right {
+  padding:10px;
+  font-size: 25px;
+  background-color: #b5e2fa;
+  color: black;
+  grid-column: 2/4;
+}
+}
+
+
+  main {
+      padding:10px;
+      font-size: 25px;
+      background-color: #b5e2fa;
+      color: black;
+  }
+
+  .main1 {
+    padding:10px;
+    font-size: 25px;
+    background-color: #b5e2fa;
+    color: black;
+    grid-column: 1/4;
+  }
+
+  .crew {
+    display: flex;
+    justify-content: center;
+
+  }
+  
+  aside {
+      padding:10px;
+      font-size: 25px;
+      background-color: #ded5cf;
+      color: black;
+  }
+  
+  footer {
+      font-size: 20px;
+      grid-column: 1/4;
+      background-color: #04724d;
+      color: black;
+  }
+  .sponsors {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .spon {
+    color:#0f2336
+  }
+
+  
+  p {
+    margin:5px;
+    padding:5px;
+    background-color: rgb(197, 197, 197);
+    border-radius: 5px;
+  }
+
+  p:hover {
+    background-color:#b5e2fa;
+  }
+
+
+  
